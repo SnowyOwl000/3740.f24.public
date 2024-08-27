@@ -1,0 +1,27 @@
+\item\problemnumber{NL6}{2}{51}{\ }{-}
+Show how each of the following floating-point values would be stored using
+IEEE-$754$ single precision (be sure to indicate the sign bit, the exponent
+and the significand fields:
+\begin{list}{\textbf{\alph{enumii}}}{\usecounter{enumii}}
+    \item $12.5$
+    \item $-1.5$
+    \item $0.75$
+    \item $26.625$
+\end{list}
+\vskip12pt
+\ifanswers
+\textcolor{blue}{
+\textbf{Answer:}\\
+IEEE-$754$ uses $8$ exponent bits and $24$ significand bits, with one of those
+bits implied (not stored). The exponent is stored in excess-$127$ format, and
+the significand is scaled so that $1.0_2\le s<10.0_2$. The leading $1$ bit is
+not stored.
+\begin{list}{\textbf{\alph{enumii}}}{\usecounter{enumii}}
+    \item Part a answer goes here
+    \item Part b answer goes here
+    \item Part c answer goes here
+    \item Part d answer goes here
+\end{list}
+}
+\newpage
+\fi
