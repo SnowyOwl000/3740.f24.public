@@ -1,0 +1,61 @@
+\item\problemnumber{NL6}{3}{32}{\ }{-}
+Create the K-maps and then simplify for the following functions:
+\begin{list}{\textbf{\alph{enumii}}}{\usecounter{enumii}}
+    \item \begin{tabular}{c|c|c|c|c|}
+        \tikz{\node[below left, inner sep=1pt] (wx) {wx};%
+        \node[above right,inner sep=1pt] (yz) {yz};%
+        \draw (wx.north west|-yz.north west) -- (wx.south east-|yz.south east);}
+        & $00$ & $01$ & $11$ & $10$ \\ \hline
+        $00$ & $1$ & $1$ & $0$ & $1$ \\ \hline
+        $01$ & $1$ & $1$ & $0$ & $1$ \\ \hline
+        $11$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+        $10$ & $1$ & $1$ & $1$ & $1$ \\ \hline
+    \end{tabular}\\[12pt]
+    \item \begin{tabular}{c|c|c|c|c|}
+        \tikz{\node[below left, inner sep=1pt] (wx) {wx};%
+        \node[above right,inner sep=1pt] (yz) {yz};%
+        \draw (wx.north west|-yz.north west) -- (wx.south east-|yz.south east);}
+        & $00$ & $01$ & $11$ & $10$ \\ \hline
+        $00$ & $0$ & $1$ & $1$ & $0$ \\ \hline
+        $01$ & $1$ & $1$ & $1$ & $1$ \\ \hline
+        $11$ & $0$ & $0$ & $1$ & $1$ \\ \hline
+        $10$ & $0$ & $1$ & $1$ & $0$ \\ \hline
+    \end{tabular}\\[12pt]
+    \item \begin{tabular}{c|c|c|c|c|}
+        \tikz{\node[below left, inner sep=1pt] (wx) {wx};%
+        \node[above right,inner sep=1pt] (yz) {yz};%
+        \draw (wx.north west|-yz.north west) -- (wx.south east-|yz.south east);}
+        & $00$ & $01$ & $11$ & $10$ \\ \hline
+        $00$ & $0$ & $1$ & $0$ & $0$ \\ \hline
+        $01$ & $1$ & $1$ & $1$ & $1$ \\ \hline
+        $11$ & $1$ & $1$ & $1$ & $1$ \\ \hline
+        $10$ & $0$ & $1$ & $0$ & $1$ \\ \hline
+    \end{tabular}
+\end{list}
+\vskip12pt
+\ifanswers
+\textcolor{blue}{
+\textbf{Answer:}\\
+\begin{list}{\textbf{\alph{enumii}}}{\usecounter{enumii}}
+    \item Here's the empty table:\\[6pt]
+        \begin{tikzpicture}
+        \node at (3.5,5) {$yz$};
+        \node at (2,4) {$00$};
+        \node at (3,4) {$01$};
+        \node at (4,4) {$11$};
+        \node at (5,4) {$10$};
+        \node at (0,1.5) {$wx$};
+        \node at (1,0) {$10$};
+        \node at (1,1) {$11$};
+        \node at (1,2) {$01$};
+        \node at (1,3) {$00$};
+        \draw (1.3,-0.5) -- (1.3,3.5) -- (5.7,3.5);
+    \end{tikzpicture}
+    \vskip12pt
+    The resulting simplfied function is (you do this part))\\[12pt]
+    \item Part b answer goes here\\[12pt]
+    \item Part c answer goes here\\[12pt]
+\end{list}
+}
+\newpage
+\fi

@@ -1,0 +1,40 @@
+\item\problemnumber{NL6}{3}{49}{\ }{-}
+Find the truth table that describes the following circuit:\\[6pt]
+\begin{tikzpicture}[circuit logic US]
+    \node[or gate] at (0,0) (or1) {};
+    \node[xnor gate] at (0,1.5) (xnor1) {};
+    \node[and gate] at (0,3) (and1) {};
+    \node[nor gate] at (1.5,2.25) (nor1) {};
+    \node[and gate] at (3,0.1) (and2) {};
+    \node[not gate] at (-2,0.12) (not1) {};
+    \node[not gate] at (-2,1.4) (not2) {};
+    \node at (-3.5,-0.5) (x) {$x$};
+    \node at (-3.5,1.4) (z) {$z$};
+    \node at (-3.5,3.1) (y) {$y$};
+    \node at (4.5,0.1) (F) {$F$};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (-0.75,-0.1) (con1) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (-3,-0.5) (con2) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (-1.1,3.1) (con3) {};
+    \draw (and1.output) -- ++(right:5mm) |- (nor1.input 1);
+    \draw (xnor1.output) -- ++(right:3mm) |- (nor1.input 2);
+    \draw (nor1.output) -- ++(right:3mm) |- (and2.input 1);
+    \draw (or1.output) -- ++(right:7mm) |- (and2.input 2);
+    \draw (not1.output) -- ++(right:3mm) |- (or1.input 1);
+    \draw (and2.output) -- ++(right:3mm) |- (F);
+    \draw (x) -- (con2) -| (con1) -- ++(right:1mm) |- (or1.input 2);
+    \draw (con2) |- (not1.input);
+    \draw (con1) |- (and1.input 2);
+    \draw (not2.output) -- ++(right:1mm) |- (xnor1.input 2);
+    \draw (z) -- (not2.input);
+    \draw (y) -- (con3) -- ++(right:1mm) |- (and1.input 1);
+    \draw (con3) |- (xnor1.input 1);
+\end{tikzpicture}
+\vskip12pt
+\ifanswers
+\textcolor{blue}{
+\textbf{Answer:}\\
+Answer goes here
+}
+\newpage
+\fi
+
