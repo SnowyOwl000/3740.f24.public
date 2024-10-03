@@ -1,0 +1,33 @@
+\item\problemnumber{NL6}{3}{37}{\ }{-}
+Create the K-maps and then simplify for the following functions:
+\begin{list}{\textbf{\alph{enumii}}}{\usecounter{enumii}}
+    \item \begin{tabular}{c|c|c|c|c|}
+        \tikz{\node[below left, inner sep=1pt] (x) {x};%
+        \node[above right,inner sep=1pt] (yz) {yz};%
+        \draw (x.north west|-yz.north west) -- (x.south east-|yz.south east);}
+        & $00$ & $01$ & $11$ & $10$ \\ \hline
+        $0$ & X & $0$ & $0$ & $1$ \\ \hline
+        $1$ & $1$ & $1$ & $X$ & $1$ \\ \hline
+    \end{tabular}\\[12pt]
+    \item \begin{tabular}{c|c|c|c|c|}
+        \tikz{\node[below left, inner sep=1pt] (wx) {wx};%
+        \node[above right,inner sep=1pt] (yz) {yz};%
+        \draw (wx.north west|-yz.north west) -- (wx.south east-|yz.south east);}
+        & $00$ & $01$ & $11$ & $10$ \\ \hline
+        $00$ & $1$ & $1$ & $1$ & $1$ \\ \hline
+        $01$ & X & $0$ & $1$ & X \\ \hline
+        $11$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+        $10$ & $0$ & $1$ & X & $0$ \\ \hline
+    \end{tabular}
+\end{list}
+\vskip12pt
+\ifanswers
+\textcolor{blue}{
+\textbf{Answer:}\\
+\begin{list}{\textbf{\alph{enumii}}}{\usecounter{enumii}}
+    \item Part a answer goes here\\[12pt]
+    \item Part b answer goes here\\[12pt]
+\end{list}
+}
+\newpage
+\fi

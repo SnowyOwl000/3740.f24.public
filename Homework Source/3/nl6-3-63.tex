@@ -1,0 +1,45 @@
+\item\problemnumber{NL5}{3}{63}{\ }{-}
+Complete the truth table for the following sequential circuit:\\[6pt]
+\begin{tikzpicture}[circuit logic US]
+    \node[flipflop JK] at (6,0) (jk1) {};
+    \node[flipflop D] at (2.5,0) (d1) {};
+    \node[xor gate] at (0,0.84) (xor1) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (4.25,0.85) (con1) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (jk1.pin 6) (con2) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (1.25,-1.75) (con3) {};
+    \node at (-1.5,0.74) (x) {$x$};
+    \node at (4.25,2) (a) {$A$};
+    \node at (8.5,0.85) (b) {$B$};
+    \draw (d1.pin 6) -- (jk1.pin 1);
+    \draw (d1.pin 4) -- (jk1.pin 3);
+    \draw (xor1.output) -- ++(right:3mm) |- (d1.pin 1);
+    \draw (x) -- (xor1.input 2);
+    \draw (con1) -- (a);
+    \draw (con2) -- (b);
+    \draw (con2) -- (7.12,2.5) -- (-0.75,2.5) |- (xor1.input 1);
+    \draw (0.5,-1.75) -- (con3) |- (d1.pin 3);
+    \draw (con3) -- (4.25,-1.75) |- (jk1.pin 2);
+    \draw[-{Latex[length=2mm]}] (-1.2,-1.75) -| (-1,-1.55) -| (-0.8,-1.75) -|
+    (-0.6,-1.55) -| (-0.4,-1.75) -| (-0.2,-1.55) -| (0,-1.75) -- (0.4,-1.75);
+\end{tikzpicture}
+\vskip12pt
+\begin{tabular}{|ccc|c|c|}
+    \hline
+    $A_t$ & $B_t$ & $X$ & $A_{t+1}$ & $B_{t+1}$\\ \hline\hline
+    $0$ & $0$ & $0$ & & \\ \hline
+    $0$ & $0$ & $1$ & & \\ \hline
+    $0$ & $1$ & $0$ & & \\ \hline
+    $0$ & $1$ & $1$ & & \\ \hline
+    $1$ & $0$ & $0$ & & \\ \hline
+    $1$ & $0$ & $1$ & & \\ \hline
+    $1$ & $1$ & $0$ & & \\ \hline
+    $1$ & $1$ & $1$ & & \\ \hline
+\end{tabular}
+\vskip12pt
+\ifanswers
+\textcolor{blue}{
+\textbf{Answer:}\\
+}
+\newpage
+\fi
+

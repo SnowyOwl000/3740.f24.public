@@ -1,0 +1,47 @@
+\item\problemnumber{NL5}{3}{65}{\ }{-}
+Complete the truth table for the following sequential circuit:\\[6pt]
+\begin{tikzpicture}[circuit logic US]
+    \node at (-0.2,0) (x) {$x$};
+    \node at (4,4.25) (a) {$A$};
+    \node at (12,3.44) (b) {$B$};
+    \draw[-{Latex[length=2mm]}] (-1.7,0.5) -| (-1.5,0.7) -| (-1.3,0.5) -|
+    (-1.1,0.7) -| (-0.9,0.5) -| (-0.7,0.7) -| (-0.5,0.5) -- (-0.1,0.5);
+    \node[flipflop D] at (2,2.5) (d1) {};
+    \node[flipflop JK] at (10,2.6) (jk1) {};
+    \node[xnor gate] at (7,3.44) (xnor1) {};
+    \node[not gate,point down] at (6,5) (not1) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (0.5,0.5) (con1) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (4,3.34) (con2) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (jk1.pin 6) (con3) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (6,5.75) (con4) {};
+    \draw (0,0.5) -- (con1) |- (d1.pin 3);
+    \draw (d1.pin 6) -- (xnor1.input 2);
+    \draw (xnor1.output) -- (jk1.pin 1);
+    \draw (con1) -- (7,0.5) |- (jk1.pin 2);
+    \draw (x) -- (7.5,0) |- (jk1.pin 3);
+    \draw (not1.output) |- (xnor1.input 1);
+    \draw (a) -- (con2);
+    \draw (b) -- (con3) |- (con4) -- (0,5.75) |- (d1.pin 1);
+    \draw (con4) -- (not1.input);
+\end{tikzpicture}
+\vskip12pt
+\begin{tabular}{|ccc|c|c|}
+    \hline
+    $A_t$ & $B_t$ & $X$ & $A_{t+1}$ & $B_{t+1}$\\ \hline\hline
+    $0$ & $0$ & $0$ & & \\ \hline
+    $0$ & $0$ & $1$ & & \\ \hline
+    $0$ & $1$ & $0$ & & \\ \hline
+    $0$ & $1$ & $1$ & & \\ \hline
+    $1$ & $0$ & $0$ & & \\ \hline
+    $1$ & $0$ & $1$ & & \\ \hline
+    $1$ & $1$ & $0$ & & \\ \hline
+    $1$ & $1$ & $1$ & & \\ \hline
+\end{tabular}
+\vskip12pt
+\ifanswers
+\textcolor{blue}{
+\textbf{Answer:}\\
+}
+\newpage
+\fi
+

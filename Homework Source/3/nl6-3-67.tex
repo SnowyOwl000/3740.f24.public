@@ -1,0 +1,45 @@
+\item\problemnumber{NL5}{3}{67}{\ }{-}
+A sequential circuit has one flip-flop; two inputs $A$ and $B$ and one output
+$S$. It consists of a full adder circuit connected to a JK flip-flop as shown.
+Fill in the truth table for this sequential circuit.\\[12pt]
+\tikzset{
+adder/.style={flipflop, flipflop def={t1=$a$,t2=$b$,t3=$c_{in}$,t6=$sum$,
+t4=$c_{out}$}}}
+\begin{tikzpicture}[circuit logic US]
+    \node at (8.5,3.34) (q) {$Q$};
+    \draw[-{Latex[length=2mm]}] (-1.7,4.5) -| (-1.5,4.7) -| (-1.3,4.5) -|
+    (-1.1,4.7) -| (-0.9,4.5) -| (-0.7,4.7) -| (-0.5,4.5) -- (-0.1,4.5);
+    \node[adder] at (2,2.5) (add1) {};
+    \node at ($(add1.pin 1)+(-0.3,0)$) (a) {$A$};
+    \node at ($(add1.pin 2)+(-0.3,0)$) (b) {$B$};
+    \node at ($(add1.pin 6)+(0.3,0)$) (s) {$S$};
+    \node[flipflop JK] at (6,2.5) (jk1) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (4,1.66) (con2) {};
+    \node[circle,draw,fill,inner sep=0pt,minimum size=1mm] at (7.5,3.34) (con3) {};
+    \draw (add1.pin 4) -- (jk1.pin 3);
+    \draw (0,4.5) -- ++(right:45mm) |- (jk1.pin 2);
+    \draw (con2) |- (jk1.pin 1);
+    \draw (jk1.pin 6) -- (q);
+    \draw (con3) -- (7.5,1) -| (add1.pin 3);
+\end{tikzpicture}
+\vskip12pt
+\begin{tabular}{|ccc|c|c|}
+    \hline
+    $A$ & $B$ & $Q_t$ & $Q_{t+1}$ & $S$\\ \hline\hline
+    $0$ & $0$ & $0$ & & \\ \hline
+    $0$ & $0$ & $1$ & & \\ \hline
+    $0$ & $1$ & $0$ & & \\ \hline
+    $0$ & $1$ & $1$ & & \\ \hline
+    $1$ & $0$ & $0$ & & \\ \hline
+    $1$ & $0$ & $1$ & & \\ \hline
+    $1$ & $1$ & $0$ & & \\ \hline
+    $1$ & $1$ & $1$ & & \\ \hline
+\end{tabular}
+\vskip12pt
+\ifanswers
+\textcolor{blue}{
+\textbf{Answer:}\\
+}
+\newpage
+\fi
+
