@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\newif\ifshadedsectiontitles
+\shadedsectiontitlestrue
+
+\newcommand{\semester}{Fall}
+\newcommand{\cyear}{2024}
+\newcommand{\crn}{40920}
+\newcommand{\homeworknum}{4}
+\newcommand{\duedate}{Monday, November 4, 2024}
+
+\input{\doccommon}
+\usepackage{circuitikz}
+\usetikzlibrary{circuits.logic.US}
+
+\begin{document}
+
+\input{\doccourse/3740.header.tex}
+
+\chead{Homework \homeworknum}
+
+{\large Homework \homeworknum}\\
+\emph{Due date: \duedate}\\
+
+\begin{list}{\textbf{\arabic{enumi}}}{\usecounter{enumi}
+\setlength{\itemsep}{0.25in}}
+
+\section{Part I. 10 points each.}
+
+\input{\doccontent/NL5/Ch04/nl5-4-5.tex}
+
+\input{\doccontent/NL5/Ch04/nl5-4-14.tex}
+
+\input{\doccontent/NL5/Ch04/nl5-4-27.tex}
+
+%\newpage
+
+\input{\doccontent/NL5/Ch04/nl5-4-39.tex}
+
+\input{\doccontent/NL5/Ch04/nl5-4-44.tex}
+
+%\newpage
+
+\section{Part II. 20 points each.}
+
+\input{\doccontent/NL5/Ch04/nl5-4-22.tex}
+
+\input{\doccontent/NL5/Ch04/nl5-4-30.tex}
+
+\input{\doccontent/NL5/Ch04/nl5-4-33.tex}
+
+\input{\doccontent/NL5/Ch04/nl5-4-35.tex}
+
+\input{\doccontent/NL5/Ch04/nl5-4-54.tex}
+
+\end{list}
+
+\end{document}
