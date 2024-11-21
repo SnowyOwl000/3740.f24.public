@@ -1,0 +1,70 @@
+\documentclass{article}
+
+\newif\ifshadedsectiontitles
+\shadedsectiontitlestrue
+
+\newcommand{\semester}{Fall}
+\newcommand{\cyear}{2024}
+\newcommand{\crn}{40920}
+\newcommand{\homeworknum}{5}
+\newcommand{\duedate}{Monday, December 9, 2024}
+
+\input{\doccommon}
+\usepackage{circuitikz}
+\usetikzlibrary{circuits.logic.US}
+
+\begin{document}
+
+\input{\doccourse/3740.header.tex}
+
+\chead{Homework \homeworknum}
+
+{\large Homework \homeworknum}\\
+\emph{Due date: \duedate}\\
+
+\begin{list}{\textbf{\arabic{enumi}}}{\usecounter{enumi}
+\setlength{\itemsep}{0.25in}}
+
+% 5.11
+% 5.14
+% 5.15
+% 5.16
+% 5.20
+
+% 5.3
+% 5.5
+% 5.19
+% 5.26
+% 5.28
+
+\section{Part I. 10 points each.}
+
+\input{\doccontent/NL6/Ch05/nl6-5-11.tex}
+
+\input{\doccontent/NL6/Ch05/nl6-5-14.tex}
+
+\input{\doccontent/NL6/Ch05/nl6-5-15.tex}
+
+%\newpage
+
+\input{\doccontent/NL6/Ch05/nl6-5-16.tex}
+
+\input{\doccontent/NL6/Ch05/nl6-5-20.tex}
+
+%\newpage
+
+\section{Part II. 20 points each.}
+
+\input{\doccontent/NL6/Ch05/nl6-5-3.tex}
+
+\input{\doccontent/NL6/Ch05/nl6-5-5.tex}
+
+\input{\doccontent/NL6/Ch05/nl6-5-19.tex}
+
+\input{\doccontent/NL6/Ch05/nl6-5-26.tex}
+
+\input{\doccontent/NL6/Ch05/nl6-5-28.tex}
+
+\end{list}
+
+\end{document}
